@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:navigation_bar/src/pages/tabs/history_tab/history_tab.dart';
-import 'package:navigation_bar/src/pages/tabs/home_tab/home_tab.dart';
-import 'package:navigation_bar/src/pages/tabs/more_tab/more_tab.dart';
 import 'package:navigation_bar/src/widgets/custom_navigation_bar/custom_nab_bar_controller.dart';
 import 'package:navigation_bar/src/widgets/custom_navigation_bar/custom_navigation_bar.dart';
 
@@ -47,14 +44,27 @@ class _HomeState extends State<Home> {
             body: Container(
               child: Column(
                 children: [
-                  //   if (_.selectTab == SelectedTab.Home) HomeTab(),
-                  // if (_.selectTab == SelectedTab.History) HistoryTab(),
-                  // if (_.selectTab == SelectedTab.More) MoreTab(),
-                  _.selectTab == SelectedTab.Home ? HomeTab() : Container(),
-                  _.selectTab == SelectedTab.History
-                      ? HistoryTab()
+                  _.selectTab.index == SelectedTab.Home
+                      ? Expanded(
+                          child: Center(
+                            child: Text("Home Page"),
+                          ),
+                        )
                       : Container(),
-                  _.selectTab == SelectedTab.More ? MoreTab() : Container(),
+                  _.selectTab.index == SelectedTab.History
+                      ? Expanded(
+                          child: Center(
+                            child: Text("History Page"),
+                          ),
+                        )
+                      : Container(),
+                  _.selectTab.index == SelectedTab.More
+                      ? Expanded(
+                          child: Center(
+                            child: Text("More Page"),
+                          ),
+                        )
+                      : Container(),
                 ],
               ),
             ),
