@@ -6,7 +6,7 @@ import 'package:navigation_bar/src/pages/tabs/home_tab/home_tab_controller.dart'
 import 'package:navigation_bar/src/pages/tabs/more_tab/more_tab.dart';
 import 'package:navigation_bar/src/widgets/custom_navigation_bar/custom_nab_bar_controller.dart';
 import 'package:navigation_bar/src/widgets/custom_navigation_bar/custom_navigation_bar.dart';
-import 'package:navigation_bar/src/widgets/custom_navigation_bar/my_page_view/my_page_view.dart';
+import 'package:navigation_bar/src/widgets/my_page_view/my_page_view.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
