@@ -1,16 +1,16 @@
 import 'package:get/get.dart';
 
 class HomeTabController extends GetxController {
-  int _counter = 0;
-  int get counter => _counter;
+  RxInt _counter = 0.obs;
+  RxInt get counter => _counter;
 
   void increment() {
-    _counter++;
-    update(["counter"]);
+    _counter.value += 1;
+    // update(["counter"]);
   }
 
   void decrement() {
-    _counter--;
-    update(["counter"]);
+    if (_counter.value > 0) _counter.value -= 1;
+    // update(["counter"]);
   }
 }

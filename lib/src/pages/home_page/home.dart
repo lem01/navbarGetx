@@ -29,7 +29,6 @@ class _HomeState extends State<Home> {
   final _bodyContent = [
     GetBuilder<HomeTabController>(
         init: HomeTabController(),
-        id: "counter",
         builder: (homeTab) {
           return HomeTab();
         }),
